@@ -11,3 +11,18 @@ N.B.: CUCM=="Cisco Unified Communications Manager" is True
 
 ADBLOCK-FILTERS is a collection of filters for adblock I generally use. The motivation to create it came from personal dissatisfaction with many Ad-block filter subscriptions. Existing subscriptions quickly become bloated and slow Firefox to a noticeable degree. In the .min version of the filter list, I removed most of the filters which had a zero HitCount after about a year of using the general filter list. 
 To those who would claim that blocking Ads on the Internet is somehow bad: I usually enable the "non-intrusive" option of Adblock; if you wish your ads displayed, make them behave. 
+
+Google Python Exercises - this is me, trying to learn Python with the help of https://developers.google.com/edu/python/
+
+MULTILOGGER - an exercise in using Python logging facility
+
+SESSIONGEN - a way to generate session ID. Far from perfect, but might be useful to track down multiple streams in logs
+
+SIMPLE-DH - a simple Diffie-Hellman key negotiation algorithm implementation made for demonstration and study purposes
+
+SIMPLE-ERLANG - a simple Erlang calculation example for demonstration and study purposes
+
+
+
+
+MISC - miscellaneous code snippets
