@@ -25,8 +25,8 @@ def main():
   if len(sys.argv) >= 2:
     name = sys.argv[1]
   else:
-    name = 'World'
-  print 'Hello', name
+    name = 'and prosper!' #student's note: no point in following instructions concerning the contents of strings: better get creative
+  print 'Live long', name
 
 # This is the standard boilerplate that calls the main() function.
 if __name__ == '__main__':
