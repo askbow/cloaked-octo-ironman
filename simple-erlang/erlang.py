@@ -108,10 +108,19 @@ def PeakResults(HoursData): # all-hours list
 
 def Main():
   print 'Erlang calculation demo'
-  DurationValue = 300  # seconds, mean call duration time
+  DurationValue = 300  # seconds, mean call duration time. 
+  '''
+  Consider this: http://megamozg.ru/company/rocketcallback/blog/14610/
+  Of all calls they've analysed:
+  62.25%  - x<1   min
+  22.875% - 1<x<3 mins
+  12%     - 3<x<5 mins
+  06.625% - 5<x   mins
+  They also provide a limited industry breakdown of mean call duration.
+  '''
   WrapTimeValue = 60   # seconds
   PercentageValue = 80 # % should be served in
-  AnsweredIn = 60      # seconds
+  AnsweredIn = 30      # seconds
   HoursData = []
   for Hour in range(0, 23):
     CallsPerHourValue = int(raw_input("Mean number of calls during "+Hour+" hour: "))
