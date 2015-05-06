@@ -102,7 +102,7 @@ def syscmd(cmd):
  except Exception:
       pass
  if not a==0:
-  print "ERROR code "+a+" while trying to run "+cmd 
+  print "ERROR code " + str(a) + " while trying to run " + cmd 
 
 # Include the Dropbox SDK libraries
 import dropbox
