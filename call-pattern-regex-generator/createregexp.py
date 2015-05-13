@@ -46,6 +46,11 @@ def range_to_pattern(start, stop):
         if start_digit == stop_digit:
             pattern += start_digit
         elif start_digit != '0' or stop_digit != '9':
+            if start_digit > stop_digit: 
+              # otherwise, in some cases range would be in descending order like [8-0]
+              temp_digit = start_digit
+              start_digit = stop_digit
+              stop_digit = temp_digit
             pattern += '[{}-{}]'.format(start_digit, stop_digit)
         else:
             any_digit_count += 1
