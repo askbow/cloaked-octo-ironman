@@ -9,42 +9,47 @@ in a queuing system.
 '''
 import math
 
-def ErlangCPODelayTime(Traffic,Lines,HoldTime,DelayTime):
+
+def ErlangCPODelayTime(Traffic, Lines, HoldTime, DelayTime):
   Probability = 0
-  Probability = ErlangC(Traffic,Lines) * math.exp(-(Lines-Traffic) * DelayTime/HoldTime)
-  if (Probability>1):
+  Probability = ErlangC(Traffic, Lines) * \
+                        math.exp(-(Lines - Traffic) * DelayTime / HoldTime)
+  if (Probability > 1):
     return 1
   else:
-    return Probability #probability that a request will be in queue for time less or equal to DelayTime
+    # probability that a request will be in queue for time less or equal to
+    # DelayTime
+    return Probability
 
 
-def ErlangB(Traffic,pLines):
-  #PBR,index;
-  if (Traffic>0):
-  	PBR = (1 + Traffic)/Traffic
-	  for index in range(2, pLines+1)
+def ErlangB(Traffic, pLines):
+  # PBR,index;
+  if (Traffic > 0):
+  	PBR = (1 + Traffic) / Traffic
+	  for index in range(2, pLines + 1)
 	    PBR = index / Traffic * PBR + 1
-		  if ( PBR > 10000 ):
+		  if (PBR > 10000):
         return 0
-		return 1/PBR
+		return 1 / PBR
   else:
     return 0
 
-def ErlangC(Traffic,pLines):
+
+def ErlangC(Traffic, pLines):
   # EBResult,Probability
-  EBResult = ErlangB(Traffic,pLines)
-  Probability = EBResult/(1-(Traffic/pLines)*(1-EBResult)) 
-  if (Probability>1):
+  EBResult = ErlangB(Traffic, pLines)
+  Probability = EBResult / (1 - (Traffic / pLines) * (1 - EBResult))
+  if (Probability > 1):
     return 1
   else:
     return Probability
 
-    
-def CallDurationCheck(DurationValue): # mean call duration
+
+def CallDurationCheck(DurationValue):  # mean call duration
   # DurationValue
-	if ((DurationValue>=10) & (DurationValue<=1200)):
+	if ((DurationValue >= 10) & (DurationValue <= 1200)):
 		return DurationValue
-	else if (DurationValue<10):
+	else if (DurationValue < 10):
     return 10
   else:
     return 1200
