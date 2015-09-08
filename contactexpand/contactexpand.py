@@ -24,42 +24,20 @@ def main():
             '[%d/%m %H:%M:%S]',
             time.localtime()) +
         ' Contact list extracted.\n\nExpanding...')
-    if countone > 500:
-        timetorest = 0.05
-    if countone > 1000:
-        timetorest = 0
-    time.sleep(timetorest)
     for row in rowrow:
-        rowrowrow.append(row[0:2])
-    print(
-        time.strftime(
-            '[%d/%m %H:%M:%S]',
-            time.localtime()) +
-        ' There are ' +
-        str(countone) +
-        ' records to expand, it may take some time.')
-    time.sleep(timetorest)
-    #print(time.strftime('[%d/%m %H:%M:%S]',time.localtime()))
+        rowrowrow.append(row[2:4])
     for row in rowrowrow:
         for rowtwo in rowrow:
-            rownorow.append(row + rowtwo)
+            rownorow.append(row + rowtwo[2:6]) #correction for cisco jabber
             if rownorow[-1][0] == rownorow[-1][2]:
                 rownorow.pop()
-    #print(time.strftime('[%d/%m %H:%M:%S]',time.localtime()))
     print(time.strftime('[%d/%m %H:%M:%S]', time.localtime()) +
           ' Expanded to memory ok. Now writing to output.csv ' +
           str((countone *
                countone) -
               countone) +
           ' records...')
-    time.sleep(timetorest * 2)
-    # counttwo=0
-    # for row in rownorow:
-    # if counttwo/countone==counttwo%countone:
-    # print('.'),
-    # time.sleep(timetorest/100)
     wr.writerows(rownorow)
-    #counttwo= counttwo+1
     print(time.strftime('[%d/%m %H:%M:%S]', time.localtime()) +
           ' Done expanding ' +
           str(countone) +
