@@ -27,7 +27,7 @@ def main():
             if outrow != {}:
                 wr.writerow(outrow)
     else:
-        print(time.strftime('[%d/%m %H:%M:%S]', time.localtime()) + "No fields contains that substring in the input file!")
+        print(time.strftime('[%d/%m %H:%M:%S]', time.localtime()) + "No fields contain that substring in the input file!")
     print(time.strftime('[%d/%m %H:%M:%S]', time.localtime()) + ' Finished')
 
 
