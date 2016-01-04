@@ -39,10 +39,10 @@ Usual iperf output looks something like this:
 ...</code>
 (a few thousand lines like this)
 
-With a text editor  it is trivial to turn that into something like this:
+With a text editor  
+<code>sed -r 's/^(\[[SUM0-9]*\])[ ]+([0-9]{1,5})\.0-.+[ ]+([0-9]+).[KMG]*bits.sec$/\1;\2;\3/' log.txt > iperf-extracted-timeseries.csv</code>
 
-<code>sed -r 's/^(\[[0-9]*\])  ([0-9]*)\.0- .*([0-9]*) [KMG]*bits.sec$/\1;\2;\3/' log.txt > iperf-extracted-timeseries.csv</code>
-
+it is trivial to turn that into something like this:
 <code>[192];3;55378
 [164];3;55837
 [256];3;55575
