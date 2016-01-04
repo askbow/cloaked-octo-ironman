@@ -27,6 +27,23 @@ if __name__ == '__main__':
     #     AUSTRALIA ns1.telstra.net
     verbose_ping("139.130.4.5")
     #    ==========================
+    #     some Russian Internet eXchanges (IX):
+    #     SPB-IX (Saint-Peterbourg/north-west Russia) (Part of MSK-IX association)
+    verbose_ping("194.226.100.100")
+    verbose_ping("194.226.102.100")
+    #     MSK-IX (Moscow/central Russia) (Part of MSK-IX association)
+    verbose_ping("195.208.208.100")
+    verbose_ping("195.208.215.100")
+    #     RND-IX (Rostov/southern Russia) (Part of MSK-IX association)
+    verbose_ping("193.232.140.100")
+    #verbose_ping("193.232.140.100") # only one route server at RND-IX
+    #     EKT-IX (Ural) (Part of MSK-IX association)
+    verbose_ping("194.85.107.100")
+    verbose_ping("194.85.107.200")
+    #     VLV-IX (Vladivostok/far east Russia) (Part of MSK-IX association)
+    verbose_ping("193.232.136.100")
+    #verbose_ping("193.232.136.100") # only one route server at VLV-IX
+    #    ==========================
     #     OpenDNS
     verbose_ping("208.67.222.222")
     verbose_ping("208.67.220.220")
