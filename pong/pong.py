@@ -27,6 +27,8 @@ if __name__ == '__main__':
     #     AUSTRALIA ns1.telstra.net
     verbose_ping("139.130.4.5")
     #    ==========================
+    # TODO: add some IXes from https://www.euro-ix.net/tools/ixp-directory/
+    # TODO: add some more Russian and Ukranian IXes from https://ru.wikipedia.org/wiki/%D0%A2%D0%BE%D1%87%D0%BA%D0%B0_%D0%BE%D0%B1%D0%BC%D0%B5%D0%BD%D0%B0_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82-%D1%82%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%BE%D0%BC
     #     some Russian Internet eXchanges (IX):
     #     SPB-IX (Saint-Peterbourg/north-west Russia) (Part of MSK-IX association)
     verbose_ping("194.226.100.100")
