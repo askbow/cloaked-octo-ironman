@@ -2,6 +2,7 @@
 
 # MEMMON.sh
 # A simple script to log process memory consumption
+# Useful to find out which process might be leaking memory.
 #
 # Mostly based on http://stackoverflow.com/a/147322
 # some additions based on http://askubuntu.com/a/383874
