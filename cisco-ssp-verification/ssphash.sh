@@ -58,7 +58,7 @@ then
         echo Expected:      $fSize bytes
     fi
     if [[$isActive == $( echo Active )]] 
-    then echo ${WHITE}Deprecation:${NC} ${GREEN}Not deprecated${NC}: ${GRAY}$fSize bytes${NC}
+    then echo ${WHITE}Deprecation:${NC} ${GREEN}Not deprecated${NC}
     else 
         echo ${WHITE}Deprecation:${NC} ${RED}Deprecated ${NC}
         echo It is advised against using this file in production.
